@@ -1,0 +1,39 @@
+
+
+<div *ngIf="showWorker">
+    <p>worker works!</p>
+
+    <form [formGroup]="workerForm">
+        <div>
+            <label for="email" >Email:</label>
+            <div>
+              <input type="email" id="email" formControlName="email" placeholder="Email">
+            </div>
+          </div>
+      
+          <div>
+            <label for="password">Password:</label>
+            <div>
+              <input type="password" id="password" formControlName="password" placeholder="Password">
+            </div>
+          </div>
+    
+          <div>
+            <label for="mobile">Password:</label>
+            <div>
+              <input type="text" id="mobile" formControlName="mobile" placeholder="mobile">
+            </div>
+          </div>
+    </form>
+    
+    <button (click)="goToAdmin()" >
+        admin
+    </button>
+    <br>
+    <button (click)="goToChild()" >
+        details
+    </button>
+</div>
+
+
+<router-outlet></router-outlet>
